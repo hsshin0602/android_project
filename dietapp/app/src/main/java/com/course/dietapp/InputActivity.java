@@ -21,18 +21,25 @@ public class InputActivity extends AppCompatActivity {
     ImageView imageView;
     Uri uri;
     public Uri image_uri;
+<<<<<<< HEAD:dietapp/app/src/main/java/com/course/dietapp/InputActivity.java
     Button bt1;
     RoomDB database;
+=======
+>>>>>>> parent of a768cd2 (moso2/  myproject_ upload):moso2/app/src/main/java/com/course/moso2/InputActivity.java
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
         imageView = findViewById(R.id.imageView);
         Button image_choice = findViewById(R.id.image_choice);
+<<<<<<< HEAD:dietapp/app/src/main/java/com/course/dietapp/InputActivity.java
         Button Mapbtn1 = findViewById(R.id.MapBtn1);
         database = RoomDB.getInstance(this);
 
+=======
+>>>>>>> parent of a768cd2 (moso2/  myproject_ upload):moso2/app/src/main/java/com/course/moso2/InputActivity.java
         image_choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +50,7 @@ public class InputActivity extends AppCompatActivity {
 
             }
         });
+<<<<<<< HEAD:dietapp/app/src/main/java/com/course/dietapp/InputActivity.java
 
         Mapbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +71,8 @@ public class InputActivity extends AppCompatActivity {
                 finish();
             }
         });
+=======
+>>>>>>> parent of a768cd2 (moso2/  myproject_ upload):moso2/app/src/main/java/com/course/moso2/InputActivity.java
     }
 
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
