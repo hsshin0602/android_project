@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp" />
+
+
+            <ImageButton
+                android:id="@+id/calendar"
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_gravity="end"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/calendar_icon" />
+        </GridLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center|top"
+                android:text="Today's calorie"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/calorie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom|center"
+                android:scaleType="fitCenter"
+                android:text="0"
+                android:textSize="40dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/plus" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

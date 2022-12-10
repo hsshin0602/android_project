@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">dietapp</string>
+    <string name="input_count">수량 :</string>
+    <string name="input_date">날짜 :</string>
+    <string name="input_kcal">칼로리 :</string>
+    <string name="input_food">음식 :</string>
+    <string name="input_review">리뷰 :</string>
+    <string name="input_time">아침</string>
+    <string name="input_time1">점심</string>
+    <string name="input_time2">저녁</string>
+    <string name="input_time3">간식</string>
+    <string name="input_eattime">식사시간 :</string>
+    <string name="hint_name">사과</string>
+    <string name="hint_count">2</string>
+    <string name="hint_date">yyyy-mm-dd </string>
+    <string name="hint_kcal">355</string>
+    <string name="hint_time">아침/점심/저녁/간식</string>
+    <string name="hint_review">고기가 맛있었습니다.</string>
+    <string name="input_image">이미지 선택하기</string>
+    <string name="input_save">저장 </string>
+    <string name="input_title">식단 입력</string>
+    <string name="image_choice">이미지 선택하기</string>
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>
