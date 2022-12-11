@@ -62,6 +62,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 String sCount = mainData.getCount();
                 String sTime = mainData.getTime();
                 String sReview = mainData.getReview();
+                String position = mainData.getPosition();
 
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.dialog_update);
@@ -77,7 +78,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 //ImageView imageView = dialog.findViewById(R.id.imageView2);
                 //Uri uri = Uri.parse(sImage);
                 //imageView.setImageURI(uri);
-                editMultipleText.append( "name: "+ sName+"\n date: "+ sDate + "\n count: " + sCount + "\n kcal: " + sKcal + "\n time: " + sTime + "\n review: "+ sReview + "\n");
+                editMultipleText.append( "name: "+ sName+"\n date: "+ sDate + "\n count: " + sCount + "\n kcal: " + sKcal + "\n time: " + sTime + "\n review: "+ sReview + "\n" + "음식점 위치" + position +"\n");
             }
         });
     }

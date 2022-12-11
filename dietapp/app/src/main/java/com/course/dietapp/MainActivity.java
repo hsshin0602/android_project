@@ -118,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
 
         tx1.setText(String.valueOf(year)+'-'+month2+'-'+day2);
 
-
     }
 
 }

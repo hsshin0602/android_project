@@ -31,8 +31,8 @@ public class FoodItem {
     @ColumnInfo(name = "review")
     private String review;
 
-    @ColumnInfo(name = "latitude")
-    private String latitude;
+    @ColumnInfo(name = "position")
+    private String position;
 
     @ColumnInfo(name = "longitude")
     private String longitude;
@@ -45,12 +45,12 @@ public class FoodItem {
         this.kcal = kcal;
     }
 
-    public String getLatitude() {
-        return latitude;
+    public String getPosition() {
+        return position;
     }
 
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     public String getLongitude() {

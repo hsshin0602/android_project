@@ -24,4 +24,5 @@ public interface MainDao {
 
     @Query("SELECT * FROM food")
     List<FoodItem> getAll();
+
 }
