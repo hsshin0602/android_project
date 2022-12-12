@@ -89,11 +89,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView food;
         TextView cal;
+        TextView time;
         CardView card_view;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+
+            time = itemView.findViewById(R.id.time);
             food = itemView.findViewById(R.id.food);
             cal = itemView.findViewById(R.id.kcal);
             card_view = itemView.findViewById(R.id.container);
@@ -102,6 +105,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         public void setItem(FoodItem item){
             String image = item.getImage();
             Uri uri = Uri.parse(image);
+            time.setText(item.getTime());
             food.setImageURI(uri);
             cal.setText(item.getKcal()+" kcal");
         }
