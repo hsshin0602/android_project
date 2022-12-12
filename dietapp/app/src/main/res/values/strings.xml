@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">dietapp</string>
+    <string name="app_name">diet app</string>
     <string name="input_count">수량 :</string>
     <string name="input_date">날짜 :</string>
     <string name="input_kcal">칼로리 :</string>

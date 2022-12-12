@@ -29,7 +29,6 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="44dp"
                 android:layout_weight="1"
-                android:background="@drawable/blue_line"
                 android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -41,7 +40,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:background="@color/button_color"
                 android:text="@string/image_choice"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -247,15 +248,17 @@
                     android:layout_weight="1"
                     android:hint = "음식점 위치"
                     android:textSize="20dp"/>
+
                 <Button
                     android:id="@+id/MapBtn1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:background="@color/button_color"
                     android:layout_weight="1"
+                    android:textStyle="bold"
                     android:text="지도보기" />
             </LinearLayout>
-
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -268,10 +271,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:background="@color/button_color"
                     android:layout_weight="1"
+                    android:textStyle="bold"
                     android:text="@string/input_save" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 

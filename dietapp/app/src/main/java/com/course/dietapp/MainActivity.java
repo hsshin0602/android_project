@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         tx1 = (TextView) findViewById(R.id.date);
         tx1.setText(getTime);
 
@@ -76,29 +75,6 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(total+"kcal");
     }
 
-//    public void getInput() {
-//        String[] columns = new String[]{"_id","image","name","date", "kcal", "count", "time", "review"};
-//        Cursor c = getContentResolver().query(MyContentProvider.CONTENT_URI, columns,null,
-//                null, null, null);
-//        if (c != null) {
-//            while (c.moveToNext()) {
-//                if (c.getString(3)!=tx1.getText())
-//                    continue;
-//                int _id = c.getInt(0);
-//                String image = c.getString(1);
-//                String name = c.getString(2);
-//                String date = c.getString(3);
-//                String kcal = c.getString(4);
-//                String count = c.getString(5);
-//                String time = c.getString(6);
-//                String review = c.getString(7);
-//                //FoodItem foodItem = new FoodItem(_id,image,name,date,kcal,count,time,review);
-//                //mFoodItems.add(foodItem);
-//                total+=Integer.parseInt(kcal);
-//            }// 수량 *칼로리 계산하는 방법 찾기
-//            c.close();
-//        }
-//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

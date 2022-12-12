@@ -73,12 +73,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 dialog.getWindow().setLayout(width, height);
                 dialog.show();
 
-               // Button bt_update = dialog.findViewById(R.id.bt_update);
-                EditText editMultipleText = dialog.findViewById(R.id.dialog_edit_text);
-                //ImageView imageView = dialog.findViewById(R.id.imageView2);
-                //Uri uri = Uri.parse(sImage);
-                //imageView.setImageURI(uri);
-                editMultipleText.append( "name: "+ sName+"\n date: "+ sDate + "\n count: " + sCount + "\n kcal: " + sKcal + "\n time: " + sTime + "\n review: "+ sReview + "\n" + "음식점 위치" + position +"\n");
+                TextView editMultipleText = dialog.findViewById(R.id.dialog_edit_text);
+                editMultipleText.append( "\n\nname: "+ sName+"\n\n date: "
+                        + sDate + "\n\n count: " + sCount + "\n\n kcal: " + sKcal + "\n\n time: " + sTime
+                        + "\n\n review: "+ sReview + "\n\n" + "장소: " + position +"\n");
             }
         });
     }
@@ -105,7 +103,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             String image = item.getImage();
             Uri uri = Uri.parse(image);
             food.setImageURI(uri);
-            cal.setText(item.getKcal()+"kcal");
+            cal.setText(item.getKcal()+" kcal");
         }
     }
 }
