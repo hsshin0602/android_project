@@ -21,4 +21,4 @@
 
 ### 개발툴
 - Android Studio
--DB: Room이용
+- DB: Room이용
