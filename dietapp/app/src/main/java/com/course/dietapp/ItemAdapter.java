@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -73,10 +74,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 dialog.getWindow().setLayout(width, height);
                 dialog.show();
 
+               // Button bt_update = dialog.findViewById(R.id.bt_update);
                 TextView editMultipleText = dialog.findViewById(R.id.dialog_edit_text);
-                editMultipleText.append( "\n\nname: "+ sName+"\n\n date: "
-                        + sDate + "\n\n count: " + sCount + "\n\n kcal: " + sKcal + "\n\n time: " + sTime
-                        + "\n\n review: "+ sReview + "\n\n" + "장소: " + position +"\n");
+                ImageView imageView = dialog.findViewById(R.id.imageView2);
+                Uri uri = Uri.parse(sImage);
+                imageView.setImageURI(uri);
+                editMultipleText.append( "날짜: "+ sDate+"\n\n" +"음식: "+ sName +"\n\n" + "개수: " + sCount + "\n\n" +"칼로리: " + sKcal +"\n\n" + "식사시간: " + sTime + "\n\n" +"리뷰: "+ sReview + "\n\n" +"음식점 위치:" + position);
             }
         });
     }
@@ -95,9 +98,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-
-            time = itemView.findViewById(R.id.time);
             food = itemView.findViewById(R.id.food);
+            time = itemView.findViewById(R.id.time);
             cal = itemView.findViewById(R.id.kcal);
             card_view = itemView.findViewById(R.id.container);
         }
@@ -105,9 +107,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         public void setItem(FoodItem item){
             String image = item.getImage();
             Uri uri = Uri.parse(image);
-            time.setText(item.getTime());
             food.setImageURI(uri);
-            cal.setText(item.getKcal()+" kcal");
+            cal.setText(item.getKcal()+"kcal");
+            time.setText(item.getTime());
         }
+
     }
+
+
 }

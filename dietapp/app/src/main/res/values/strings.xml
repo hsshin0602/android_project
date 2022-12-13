@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">diet app</string>
+    <string name="app_name">dietapp</string>
     <string name="input_count">수량 :</string>
     <string name="input_date">날짜 :</string>
     <string name="input_kcal">칼로리 :</string>
@@ -21,6 +21,6 @@
     <string name="input_title">식단 입력</string>
     <string name="image_choice">이미지 선택하기</string>
     <string name="title_activity_maps">MapsActivity</string>
-=======
->>>>>>> parent of a768cd2 (moso2/  myproject_ upload):moso2/app/src/main/res/values/strings.xml
+    =======
+    >>>>>>> parent of a768cd2 (moso2/ myproject_ upload):moso2/app/src/main/res/values/strings.xml
 </resources>

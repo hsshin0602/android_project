@@ -10,7 +10,7 @@ import static androidx.room.OnConflictStrategy.REPLACE;
 
 @Dao
 public interface MainDao {
-    @Insert(onConflict = REPLACE)
+    @Insert
     void insert(FoodItem mainData);
 
     @Delete
@@ -24,5 +24,9 @@ public interface MainDao {
 
     @Query("SELECT * FROM food")
     List<FoodItem> getAll();
+
+    @Query("SELECT * FROM food WHERE date = :date")
+    List<FoodItem> getAllByDate(String date);
+
 
 }

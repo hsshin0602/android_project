@@ -4,6 +4,7 @@ import static androidx.core.content.FileProvider.getUriForFile;
 
 import static com.course.dietapp.MainActivity.REQUEST_CODE;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -58,6 +59,10 @@ public class InputActivity extends AppCompatActivity {
         Button Mapbtn1 = findViewById(R.id.MapBtn1);
         database = RoomDB.getInstance(this);
         restaurant_position = (TextView) findViewById(R.id.textView7);
+        Intent intent=getIntent();
+        String date = intent.getStringExtra("date");
+        TextView date_bt = (TextView) findViewById(R.id.showDate);
+        date_bt.setText(date);
 
         image_choice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,10 +85,8 @@ public class InputActivity extends AppCompatActivity {
                         intent.setType("image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);
                         activityResultLauncher.launch(intent);
-
                     }
                 }
-
             }
         });
 
@@ -102,9 +105,9 @@ public class InputActivity extends AppCompatActivity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addInput(view);
+                addInput();
                 Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
+                setResult(Activity.RESULT_OK,intent);
                 finish();
             }
         });
@@ -118,12 +121,12 @@ public class InputActivity extends AppCompatActivity {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                         Intent intent = result.getData();
                         Uri uri = intent.getData();
-
                         InputStream in = null;
                         try {
                             in = getContentResolver().openInputStream(uri);
                             Bitmap bitmap = BitmapFactory.decodeStream(in);
                             in.close();
+
                             File file = new File(currentPhotoPath);
                             FileOutputStream output = new FileOutputStream(file);
                             bitmap.compress(Bitmap.CompressFormat.JPEG,100,output);
@@ -131,10 +134,8 @@ public class InputActivity extends AppCompatActivity {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-
                     }
                 }
-
             }
     );
 
@@ -161,21 +162,41 @@ public class InputActivity extends AppCompatActivity {
         }
     }
 
-    public void addInput(View view) {
+    public void addInput() {
+        int kcal;
+        String count=((EditText) findViewById(R.id.editText2)).getText().toString();
+        String name=((EditText) findViewById(R.id.editText1)).getText().toString();
+        if(name.equals("chicken")){
+           kcal=Integer.parseInt(count)*406;
+        }
+        else if(name.equals("sweet potato")){
+            kcal=Integer.parseInt(count)*200;
+        }
+        else if(name.equals("pizza")){
+            kcal=Integer.parseInt(count)*530;
+        }
+        else if(name.equals("egg")){
+            kcal=Integer.parseInt(count)*70;
+        }
+        else if(name.equals("gogi")){
+            kcal=Integer.parseInt(count)*350;
+        }
+        else{
+            kcal=Integer.parseInt(count)*100;
+        }
 
         FoodItem data = new FoodItem();
         data.setImage(currentPhotoPath);
-        data.setDate(((EditText) findViewById(R.id.editText6)).getText().toString());
-        data.setName(((EditText) findViewById(R.id.editText1)).getText().toString());
-        data.setKcal(((EditText) findViewById(R.id.editText3)).getText().toString());
-        data.setCount(((EditText) findViewById(R.id.editText2)).getText().toString());
+        data.setDate(((TextView) findViewById(R.id.showDate)).getText().toString());
+        data.setName(name);
+        data.setKcal(Integer.toString(kcal));
+        data.setCount(count);
         data.setTime(((EditText) findViewById(R.id.editText4)).getText().toString());
         data.setReview(((EditText) findViewById(R.id.editText5)).getText().toString());
         data.setPosition(position);
 
-        //위도 경도 추가
         database.mainDao().insert(data);
-        Toast.makeText(getBaseContext(), "Record Added", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "저장되었습니다", Toast.LENGTH_LONG).show();
     }
 
     @Override

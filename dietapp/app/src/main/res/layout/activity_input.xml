@@ -29,6 +29,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="44dp"
                 android:layout_weight="1"
+                android:background="@drawable/green_line"
                 android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -40,9 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:background="@color/button_color"
                 android:text="@string/image_choice"
-                android:textStyle="bold"
+                android:fontFamily="@font/jalnan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -58,23 +58,25 @@
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/jalnan"
                     android:text="@string/input_date"
                     android:textSize="16dp" />
 
-                <EditText
-                    android:id="@+id/editText6"
+                <TextView
+                    android:id="@+id/showDate"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="25dp"
                     android:layout_marginEnd="50dp"
                     android:autofillHints="username"
-                    android:background="@drawable/blue_line"
+                    android:background="@drawable/green_line"
                     android:ems="10"
                     android:gravity="center|start"
                     android:hint="@string/hint_date"
                     android:inputType="textNoSuggestions|textVisiblePassword"
                     android:maxLines="1"
                     android:paddingStart="15px"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -90,6 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/input_food"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16dp" />
 
                 <EditText
@@ -99,46 +102,18 @@
                     android:layout_marginStart="25dp"
                     android:layout_marginEnd="50dp"
                     android:autofillHints="username"
-                    android:background="@drawable/blue_line"
+                    android:background="@drawable/green_line"
                     android:ems="10"
                     android:gravity="center|start"
                     android:hint="@string/hint_name"
                     android:inputType="textNoSuggestions|textVisiblePassword"
                     android:maxLines="1"
                     android:paddingStart="15px"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/input_kcal"
-                    android:textSize="16dp" />
-
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginEnd="50dp"
-                    android:autofillHints="username"
-                    android:background="@drawable/blue_line"
-                    android:ems="10"
-                    android:gravity="center|start"
-                    android:hint="@string/hint_kcal"
-                    android:inputType="textNoSuggestions|textVisiblePassword"
-                    android:maxLines="1"
-                    android:paddingStart="15px"
-                    android:textSize="16sp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,6 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/input_count"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16dp" />
 
                 <EditText
@@ -161,13 +137,14 @@
                     android:layout_marginStart="25dp"
                     android:layout_marginEnd="50dp"
                     android:autofillHints="username"
-                    android:background="@drawable/blue_line"
+                    android:background="@drawable/green_line"
                     android:ems="10"
                     android:gravity="center|start"
                     android:hint="@string/hint_count"
                     android:inputType="textNoSuggestions|textVisiblePassword"
                     android:maxLines="1"
                     android:paddingStart="15px"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -184,6 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/input_eattime"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16dp" />
 
                 <EditText
@@ -193,13 +171,14 @@
                     android:layout_marginStart="25dp"
                     android:layout_marginEnd="50dp"
                     android:autofillHints="username"
-                    android:background="@drawable/blue_line"
+                    android:background="@drawable/green_line"
                     android:ems="10"
                     android:gravity="center|start"
                     android:hint="@string/hint_time"
                     android:inputType="textNoSuggestions|textVisiblePassword"
                     android:maxLines="1"
                     android:paddingStart="15px"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -215,6 +194,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/input_review"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16dp" />
 
                 <EditText
@@ -224,13 +204,14 @@
                     android:layout_marginStart="25dp"
                     android:layout_marginEnd="50dp"
                     android:autofillHints="username"
-                    android:background="@drawable/blue_line"
+                    android:background="@drawable/green_line"
                     android:ems="10"
                     android:gravity="center|start"
                     android:hint="@string/hint_review"
                     android:inputType="textNoSuggestions|textVisiblePassword"
                     android:maxLines="1"
                     android:paddingStart="15px"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -247,18 +228,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint = "음식점 위치"
+                    android:fontFamily="@font/jalnan"
                     android:textSize="20dp"/>
-
                 <Button
                     android:id="@+id/MapBtn1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:background="@color/button_color"
                     android:layout_weight="1"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/jalnan"
                     android:text="지도보기" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -271,11 +252,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:background="@color/button_color"
                     android:layout_weight="1"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/jalnan"
                     android:text="@string/input_save" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

@@ -101,12 +101,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         List<Address> addresses;
         try {
-
             addresses = geocoder.getFromLocation(
-                    latlng.latitude,
-                    latlng.longitude,
-                    1);
-        } catch (IOException ioException) {
+                    latlng.latitude, latlng.longitude,1);
+        }catch (IOException ioException) {
             //네트워크 문제
             Toast.makeText(this, "지오코더 서비스 사용불가", Toast.LENGTH_LONG).show();
             //return "지오코더 서비스 사용불가";

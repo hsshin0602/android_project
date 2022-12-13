@@ -10,7 +10,6 @@ import androidx.room.RoomDatabase;
 public abstract class RoomDB extends RoomDatabase
 {
     private static RoomDB database;
-
     private static String DATABASE_NAME = "database";
 
     public synchronized static RoomDB getInstance(Context context)
