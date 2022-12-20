@@ -26,14 +26,17 @@
 ![image](https://user-images.githubusercontent.com/86701879/208557556-81551309-3daf-4d22-b5c6-8370d0c9a4a3.png)
 
 #### 2. 메인화면
-![image](https://user-images.githubusercontent.com/86701879/208557617-ed5a17a0-06d9-4864-8066-66aef7fe58a7.png)
+![image](https://user-images.githubusercontent.com/86701879/208558223-4592b001-fcf4-4c5a-ab37-166f30a5dcfa.png)
+
 ![image](https://user-images.githubusercontent.com/86701879/208558052-cab2bb69-aedc-45a9-a003-8451733fc7ab.png)
 
-#### 3. input 화면
-![image](https://user-images.githubusercontent.com/86701879/208557631-9301ab70-78df-4589-832d-a108c521daf4.png)
+#### 3. input 화면(이미지 선택)
+![image](https://user-images.githubusercontent.com/86701879/208558244-e7c855fe-5941-4d95-b2fa-7db9ace98aa2.png)
+
+![image](https://user-images.githubusercontent.com/86701879/208557617-ed5a17a0-06d9-4864-8066-66aef7fe58a7.png)
 
 #### 4. 지도 사용
-![image](https://user-images.githubusercontent.com/86701879/208557651-d8c12356-7211-494a-8b34-96d79177582b.png)
+![image](https://user-images.githubusercontent.com/86701879/208557631-9301ab70-78df-4589-832d-a108c521daf4.png)
 
 #### 5. 상세내용
 ![image](https://user-images.githubusercontent.com/86701879/208557659-1fb88908-edc7-486a-92af-5fadf8c99db7.png)
